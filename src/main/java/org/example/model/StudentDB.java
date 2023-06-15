@@ -23,10 +23,6 @@ public class StudentDB {
         return students[randomIndex];
     }
 
-    public String toString(){
-        return Arrays.toString(students) + "\nRandom student is: "+ randomStudent();
-    }
-
     public void addStudent(Student2 newStudent){
         Student2[] newArray = Arrays.copyOf(students, students.length + 1);
         newArray[students.length] = newStudent;
@@ -68,6 +64,11 @@ public class StudentDB {
         throw new Exception("Student not found");
     }
 
-
+    @Override
+    public String toString() {
+        return "StudentDB{" +
+                "students=" + Arrays.toString(students) +
+                '}';
+    }
 }
 

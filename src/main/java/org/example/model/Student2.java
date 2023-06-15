@@ -11,11 +11,16 @@ public class Student2 {
         id = UUID.randomUUID().toString();
     }
 
-    public String toString(){
-        return "\n"+name + ", Id: " + id;
-    }
-
     public String getId() {
         return id;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Student2{" +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                '}';
     }
 }
